@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Hind Siliguri', sans-serif;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 8%;
+}
+.logo img{
+    max-width: 100%;
+    height: auto;
+}
+.navmenu{
+    display: flex;
+}
+.navmenu a{
+    color: #222;
+    font-size: 17px;
+    text-transform: capitalize;
+    font-weight: 600;
+    padding: 10px 20px;
+    transition: .42s;
+}
+.navmenu a:hover{
+    color: #83543d;
+}
+.redes-icon{
+    display: flex;
+    align-items: center;
+}
+.redes-icon i{
+    margin-right: 12px;
+    font-size: 28px;
+    font-weight: 500;
+    transition: all .42s ease;
+    color: #fff;
+}
+.redes-icon i:hover{
+    transform: translateY(-5px);
+    color: #000;
+}
+#menu-icon{
+    font-size: 30px;
+    z-index: 10001;
+    cursor: pointer;
+}
+
+section{
+    padding: 0 12%;
+}
+.home{
+    width: 100%;
+    height: 100vh;
+    background-image: url(img/slader-0.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(1,1fr);
+}
+.home-text h4{
+    color: #000;
+    font-size: 24px;
+    text-transform: capitalize;
+}
+.home-text h1{
+    color: #83543d;
+    font-size: 60px;
+    line-height: 1;
+    text-transform: capitalize;
+    margin: 20px 0;
+}
+.home-text p{
+    color: #343331;
+    font-size: 18px;
+    max-width: 400px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+.home-btn .btn1{
+    display: inline-block;
+    font-size: 17px;
+    text-transform: capitalize;
+    margin-right: 15px;
+    border: 2px solid #333;
+    padding: 10px 40px;
+    border-radius: 50px;
+    background-color: #333;
+    color: #fff;
+    font-weight: 500;
+    transition: all .42s;
+}
+.home-btn .btn1:hover{
+    background-color: transparent;
+    color: #000;
+}
+.home-btn .btn2{
+    display: inline-block;
+    font-size: 17px;
+    text-transform: capitalize;
+    color: #000;
+    font-weight: 500;
+    border: 2px solid #333;
+    padding: 10px 40px;
+    background-color: transparent;
+    border-radius: 50px;
+    transition: all .42s;
+}
+.home-btn .btn2:hover{
+    background-color: #333;
+    color: #fff;
+}
+
+/*responsive*/
+@media(max-width:830px){
+    .home-text h4{
+        font-size: 20px;
+        transition: .3s;
+    }
+    .home-text h1{
+        font-size: 50px;
+        transition: .3s;
+    }
+    .home-text p{
+        font-size: 16px;
+        transition: .3s;
+    }
+    .home-btn .btn2{
+        padding: 10px 30px;
+        transition: .3s;
+    }
+}
+@media (max-width:443px) {
+    .home-btn .btn2{
+        margin-top: 15px;
+        transition: .4s;
+    }
+}
+@media (max-width:1345px) {
+    .redes-icon i{
+        color: #000;
+        transition: .3s;
+    }
+    #menu-icon{
+        color: #000;
+        transition: .3s;
+    }
+}
+@media (max-width:914px) {
+    header{
+        padding: 20px 3%;
+        transition: .3s;
+    }
+}
+@media (max-width:785px) {
+    .navmenu{
+       position: absolute; 
+       top: 100%;
+       right: -200%;
+       width: 250px;
+       height: 35vh;
+       background: #83543d;
+       display: flex;
+       align-items: center;
+       flex-direction: column;
+       justify-content: flex-start;
+       padding: 20px;
+       border-radius: 4px;
+       transition: all .42s;
+    }
+    .navmenu a{
+        display: block;
+        margin: -3px 0;
+        transition: all .42s;
+    }
+    .navmenu a:hover{
+        transform: translateY(5px);
+    }
+    .navmenu.open{
+        right: 2%;
+    }
+}
